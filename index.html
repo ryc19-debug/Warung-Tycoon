@@ -236,6 +236,13 @@ html{--navh:115px;--ph:max(260px,calc(52dvh - 64px))}
 #shh{bottom:calc(var(--navh) + var(--ph) + 6px)}
 #shh[data-o="0"]{bottom:calc(var(--navh) + 62px)}
 #gbar{display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--navh) + var(--ph) - 13px);width:44px;height:5px;border-radius:3px;background:rgba(74,46,18,.55);z-index:9;pointer-events:none}
+
+/* ===== v31: layar lebar (laptop/PC/tablet landscape) -> game tampil dalam bingkai ala HP di tengah ===== */
+@media (min-aspect-ratio:4/5) and (min-width:600px){
+html,body{background:radial-gradient(ellipse at center,#3A2412 0%,#1A0F06 75%)!important}
+#app{width:clamp(360px,56dvh,480px)!important;max-width:none!important;margin:0 auto!important;height:100vh;height:100dvh;
+transform:translateZ(0);overflow:hidden!important;box-shadow:0 0 0 4px #5E3A15,0 0 70px rgba(0,0,0,.7)}
+}
 </style>
 </head>
 <body>
